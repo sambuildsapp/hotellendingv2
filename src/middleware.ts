@@ -1,11 +1,12 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function proxy(request: NextRequest) {
+export function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl;
 
-    // 1. Allow access to the gate page and static assets
+    // 1. Allow access to the gate page, static assets, and PUBLIC presentation
     if (
+        pathname.startsWith('/presentation') ||
         pathname.startsWith('/access-code') ||
         pathname.startsWith('/api/verify-access') ||
         pathname.startsWith('/_next') ||
