@@ -4,9 +4,10 @@ import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl;
 
-    // 1. Allow access to the gate page, static assets, and PUBLIC presentation
+    // 1. Allow access to the gate page, static assets, PUBLIC presentation, and v2 DEMO
     if (
         pathname.startsWith('/presentation') ||
+        pathname.startsWith('/v2') ||
         pathname.startsWith('/access-code') ||
         pathname.startsWith('/api/verify-access') ||
         pathname.startsWith('/_next') ||
