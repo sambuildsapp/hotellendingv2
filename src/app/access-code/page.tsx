@@ -24,7 +24,7 @@ export default function AccessCodePage() {
       if (response.ok) {
         // Successful verification will set the cookie via the API route
         router.push('/');
-        router.refresh(); // Ensure middleware picks up the new cookie
+        router.refresh(); // Ensure proxy picks up the new cookie
       } else {
         setError(true);
       }
