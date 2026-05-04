@@ -9,15 +9,15 @@ export default function Scene8About() {
     const { goToScene, prevScene } = useSimulation();
 
     return (
-        <div className="min-h-screen bg-slate-50/50">
-            {/* Added extra large bottom padding to prevent overlap with the fixed control bar */}
-            <div className="max-w-6xl mx-auto px-6 py-12 pb-64">
+        <div className="">
+            {/* Reduced top padding and removed min-h-screen to ensure header visibility */}
+            <div className="max-w-6xl mx-auto px-6 pt-4 pb-64">
                 <SceneHeader
                     title="Thank You"
                     subtitle=""
                 />
 
-                <div className="bg-white rounded-[40px] shadow-2xl border border-slate-200 overflow-hidden mt-12 animate-fade-in relative z-10">
+                <div className="bg-white rounded-[40px] shadow-2xl border border-slate-200 overflow-hidden mt-4 animate-fade-in relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         {/* Left Side: Profile */}
                         <div className="p-16 flex flex-col items-center justify-center text-center border-b md:border-b-0 md:border-r border-slate-100">

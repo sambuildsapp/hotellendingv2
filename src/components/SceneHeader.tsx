@@ -14,8 +14,8 @@ export default function SceneHeader({ title, subtitle, day }: SceneHeaderProps) 
                     {day}
                 </span>
             )}
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">{title}</h1>
-            <p className="text-xl text-gray-600">{subtitle}</p>
+            <h1 className="text-4xl font-bold text-slate-900 mb-2">{title}</h1>
+            <p className="text-xl text-slate-600">{subtitle}</p>
         </div>
     );
 }
